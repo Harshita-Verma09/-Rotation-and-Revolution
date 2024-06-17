@@ -1,0 +1,83 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-color: rgba(0, 0, 0, 0.838);
+    background-image: url("https://images.unsplash.com/photo-1516410290616-fb59b7994a51?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8c3RhcnN8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=600&q=60");
+    background-attachment: fixed;
+    background-position: center;
+}
+.main{
+    animation: rotateAnimation 20s linear infinite;
+    height: 25rem;
+    width:25rem;
+    outline: 2px solid rgb(41, 41, 41);
+    border: 2px dashed rgb(16, 19, 16);
+    position: absolute;
+    border-radius: 50%;
+    top: 10%;
+    left: 30%;
+    transform: translate(-50%, -50%);  
+}
+
+.container{
+    height: 150px;
+    width: 150px;
+    border-radius: 50%;
+    background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR1gXRyg9tGfApxuhFVc7gx9r84ww_HrEvobw&usqp=CAU");
+    background-size: cover;
+    background-repeat: repeat-x;
+    transform-origin: center;
+    box-shadow: inset  0 0 20px rgba(0,0,0.1),0 0 20px #4069ff;
+    position: absolute;
+    animation: rotateAnimation 20s linear infinite;
+   
+
+}
+@keyframes rotateAnimation{
+    0%{
+        transform: rotate(0deg); 
+        background-position:  10px 0;
+    }
+    100%{
+        transform: rotate(360deg); 
+        background-position: -950px 0; /* inside img rota35*/
+    }
+}
+.sml-circle{
+    height: 20px;
+    width: 70px;
+    border-radius: 50%;
+    background-color: aliceblue;
+    position: relative;
+    margin: 22px;
+    
+}
+.moon{
+    height: 7rem;
+    width: 7rem;
+    border-radius: 50%;
+    position: absolute;
+    background-image: url(" https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRC6vzFfQf7S1g3qsDQTpylGz9PfvuFmBx1Jw&usqp=CAU");
+    background-size:cover;
+    background-repeat: repeat-x;
+    box-shadow: inset  0 0 20px rgba(0,0,0.1),0 0 20px #2f1900;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    animation: move 12s linear infinite ;
+}
+@keyframes move{
+    0%{
+        transform: rotate(0deg); 
+        animation: rotateAnimation 13s linear infinite;
+        background-position:  0 0;
+    
+    }
+    100%{
+        transform: rotate(360deg); 
+        animation: rotateAnimation 13s linear infinite;
+        /* background-position: -750px 0; */
+    }
+}
